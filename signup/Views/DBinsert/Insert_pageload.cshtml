@@ -1,0 +1,41 @@
+﻿@model signup.Models.stinsert
+@{
+    ViewBag.Title = "Insert_pageload";
+}
+
+<h2>SignUp</h2>
+<div>
+    @using (Html.BeginForm("Insert_click", "DBinsert", FormMethod.Post))
+    {
+        <div>
+            <label>Name</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.name)
+        </div>
+        <div>
+            <label>User Name</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.uname)
+        </div>
+        <div>
+            <label>Password</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.pwd)
+        </div>
+        <div>
+            <label>Confirm Password</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.cpwd)
+        </div>
+        <div>
+            <input type="submit" value="SignUp" />
+            @Html.DisplayFor(m => m.msg)
+
+        </div>
+    }
+</div>
+
